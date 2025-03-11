@@ -4,7 +4,7 @@
 
 <div class="absolute inset-0 -z-1" id="illustration"></div>
 
-<div class="max-w-3xl mx-auto flex flex-col gap-4 items-center justify-center px-8 py-16 md:py-32 text-center">
+<div class="max-w-3xl mx-auto flex flex-col gap-4 items-center justify-center px-8 py-16 md:pt-32 text-center">
   <img class="w-16" src="{{ get_url(path="assets/logo.svg") }}" />
   <h1 class="font-bold text-4xl">Intercollegiate Math Tournament</h1>
   <div class="flex flex-col md:flex-row md:gap-16">
@@ -14,22 +14,29 @@
   <p>Registration will open Fall 2025. <a class="text-link">Sign up to receive notifications.</a></p>
 </div>
 
-<p class="max-w-3xl mx-auto text-center text-lg gap-4 px-8 py-16">
-  Run by graduate students and alumni from the
-  <a class="text-link" href="https://berkeley.mt/">Berkeley</a>,
-  <a class="text-link" href="https://stanfordmathtournament.org/">Stanford</a>, and
-  <a class="text-link" href="https://www.hmmt.org/">Harvard–MIT</a> Math Tournaments,
-  ICMT is an independent nonprofit organization that aims to spread mathematics
-  and the spirit of mathematical competition to undergraduate students around
-  the world.
-</p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 1440 90"><path class="fill-blue-500/15" fill-opacity="1" d="M0,96L60,85.3C120,75,240,53,360,58.7C480,64,600,96,720,101.3C840,107,960,85,1080,69.3C1200,53,1320,43,1380,37.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+
+<div class="bg-blue-500/15">
+  <p class="max-w-3xl mx-auto text-lg text-center px-8 py-8 md:pb-6">
+    Run by graduate students and alumni from the
+    <a class="text-link" href="https://berkeley.mt/">Berkeley</a>,
+    <a class="text-link" href="https://stanfordmathtournament.org/">Stanford</a>, and
+    <a class="text-link" href="https://www.hmmt.org/">Harvard–MIT</a> Math Tournaments,
+    ICMT is an independent nonprofit organization that aims to spread mathematics
+    and the spirit of mathematical competition to undergraduate students around
+    the world.
+  </p>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 150 1440 70"><path class="fill-blue-500/15" fill-opacity="1" d="M0,192L60,181.3C120,171,240,149,360,160C480,171,600,213,720,213.3C840,213,960,171,1080,160C1200,149,1320,171,1380,181.3L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
 
 <div class="max-w-4xl mx-auto text-center flex flex-col gap-4 px-8 py-16">
   <h2 class="font-semibold text-2xl">Who's this for?</h2>
 
   <div class="grid sm:grid-cols-2 gap-4">
     <div class="flex flex-col gap-4">
-      <div class="border border-2 p-4 rounded-xl">
+      <div class="border border-2 p-4 rounded-xl relative">
+        <!-- <img class="absolute h-12 right-4 top-1/2 -translate-y-1/2" src="{{ get_url(path="assets/penguin-lambda.png") }}" /> -->
         <h3 class="font-semibold text-lg">Division A</h3>
         <p class="italic">For the seasoned contestant</p>
       </div>
@@ -41,22 +48,18 @@
     </div>
 
     <div class="flex flex-col gap-4">
-      <div class="border border-2 p-4 rounded-xl">
+      <div class="border border-2 p-4 rounded-xl relative">
+        <!-- <img class="absolute h-12 left-4 top-1/2 -translate-y-1/2" src="{{ get_url(path="assets/penguin-delta.png") }}" /> -->
         <h3 class="font-semibold text-lg">Division B</h3>
         <p class="italic">For the novice contestant</p>
       </div>
       <p>
-        Topics include those found in
-        <a class="text-link" href="https://artofproblemsolving.com/wiki/index.php/AMC_12">high school math competitions</a>
+        Topics include
+        <a class="text-link" href="https://artofproblemsolving.com/wiki/index.php/AMC_12">high school math competition subjects</a>,
         as well as single- and multi-variable calculus, differential
         equations, and basic linear algebra.
     </div>
   </div>
-
-  <p>
-    Those less familiar with math competitions are encouraged to participate
-    in Division B!
-  </p>
 </div>
 
 <div class="max-w-6xl mx-auto text-center flex flex-col gap-4 px-8 py-16">
@@ -68,24 +71,30 @@
   </p>
 
   <div class="grid md:grid-cols-3 gap-4">
-    <div class="bg-white shadow rounded-xl p-4 flex flex-col gap-2">
+    <div class="bg-white shadow rounded-xl p-4 flex flex-col items-center gap-2">
+      <!-- Explosion icon by Freepik - https://www.flaticon.com/free-icons/explosion -->
+      <img class="h-24 w-24 p-2" src="{{ get_url(path="assets/round-power.png") }}" />
       <h3 class="font-semibold text-lg">Power Round</h3>
       <p>
-        A proof-based team round. Contestants will answer a series of questions
+        A proof-based team round. Contestants answer a series of questions
         centered around a topic, culminating in incredible results in the field
         of that chosen topic.
       </p>
     </div>
 
-    <div class="bg-white shadow rounded-xl p-4 flex flex-col gap-2">
+    <div class="bg-white shadow rounded-xl p-4 flex flex-col items-center gap-2">
+      <!-- Penguin icon by Freepik - https://www.flaticon.com/free-icons/penguin -->
+      <img class="h-24 w-24" src="{{ get_url(path="assets/round-individual.png") }}" />
       <h3 class="font-semibold text-lg">Individual Round</h3>
       <p>
-        Contestants complete short-answer questions ranging over a broad reach
-        of mathematical topics.
+        Contestants complete a series of short-answer questions ranging over a
+        broad reach of mathematical topics covered within their division.
       </p>
     </div>
 
-    <div class="bg-white shadow rounded-xl p-4 flex flex-col gap-2">
+    <div class="bg-white shadow rounded-xl p-4 flex flex-col items-center gap-2">
+      <!-- Constellation icon by imaginationlol - https://www.flaticon.com/free-icons/constellation -->
+      <img class="h-24 w-24" src="{{ get_url(path="assets/round-constellation.png") }}" />
       <h3 class="font-semibold text-lg">Constellation Round</h3>
       <p>
         With realtime submission and a live scoreboard, this round tests not
