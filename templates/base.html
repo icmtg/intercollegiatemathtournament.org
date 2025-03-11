@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en" class="bg-gray-50">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {% set permalink = section.permalink
+  | default(value=page.permalink
+  | default(value="")) %}
+
+  {% if permalink and permalink is not starting_with("/") %}
+  <link rel="canonical" href="{{ permalink | safe }}" />
+  {% endif %}
+
+  {% set title = section.title
+  | default(value=page.title
+  | default(value="Intercollegiate Math Tournament")) %}
+
+  <title>{{ title }}</title>
+  <meta name="og:title" content="{{ title }}" />
+
+  {% set description = section.description
+  | default(value=section.summary
+  | default(value=page.description
+  | default(value=page.summary
+  | default(value=""))))
+  | striptags
+  | split(pat="\n")
+  | join(sep=" ") %}
+
+  {% if description %}
+  <meta name="description" content="{{ description }}" />
+  <meta name="og:description" content="{{ description }}" />
+  {% endif %}
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Intercollegiate Math Tournament" />
+
+  <link rel="preconnect" href="https://rsms.me/" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <link rel="stylesheet" href="/style.css?{{ get_random(end=1000000) }}" />
+</head>
+
+<body>
+  {% block content %}
+  {% endblock %}
+</body>
+
+</html>

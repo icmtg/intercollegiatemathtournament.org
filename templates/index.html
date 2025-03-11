@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="absolute inset-0 -z-1" id="illustration"></div>
+
+<div class="max-w-3xl mx-auto flex flex-col gap-4 items-center justify-center px-8 py-16 md:py-32 text-center">
+  <img class="w-16" src="{{ get_url(path="assets/logo.svg") }}" />
+  <h1 class="font-bold text-4xl">Intercollegiate Math Tournament</h1>
+  <div class="flex flex-col md:flex-row md:gap-16">
+    <p class="text-xl">Columbia University</p>
+    <p class="text-xl">February 28, 2026</p>
+  </div>
+  <p>Registration will open Fall 2025. <a class="text-link">Sign up to receive notifications.</a></p>
+</div>
+
+<p class="max-w-3xl mx-auto text-center text-lg gap-4 px-8 py-16">
+  Run by graduate students and alumni from the
+  <a class="text-link" href="https://berkeley.mt/">Berkeley</a>,
+  <a class="text-link" href="https://stanfordmathtournament.org/">Stanford</a>, and
+  <a class="text-link" href="https://www.hmmt.org/">Harvard–MIT</a> Math Tournaments,
+  ICMT is an independent nonprofit organization that aims to [spread mathematics
+  and the spirit of mathematical competition to undergraduate students around
+  the world].
+</p>
+
+<div class="max-w-4xl mx-auto text-center flex flex-col gap-4 px-8 py-16">
+  <h2 class="font-semibold text-2xl">Who's this for?</h2>
+
+  <div class="grid sm:grid-cols-2 gap-4">
+    <div class="flex flex-col gap-4">
+      <div class="border border-2 p-4 rounded-xl">
+        <h3 class="font-semibold text-lg">Division A</h3>
+        <p class="italic">For the seasoned contestant</p>
+      </div>
+      <p>
+        In addition to the Division B syllabus, topics include linear algebra,
+        abstract algebra, real and complex analysis, as well as other
+        undergraduate subjects.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <div class="border border-2 p-4 rounded-xl">
+        <h3 class="font-semibold text-lg">Division B</h3>
+        <p class="italic">For the novice contestant</p>
+      </div>
+      <p>
+        Topics include those found in
+        <a class="text-link" href="https://artofproblemsolving.com/wiki/index.php/AMC_12">high school math competitions</a>
+        as well as single- and multi-variable calculus, differential
+        equations, and basic linear algebra.
+    </div>
+  </div>
+
+  <p>
+    Those less familiar with math competitions are encouraged to participate
+    in Division B!
+  </p>
+</div>
+
+<div class="max-w-6xl mx-auto text-center flex flex-col gap-4 px-8 py-16">
+  <h2 class="font-semibold text-2xl">Contest Format</h2>
+
+  <p>
+    ICMT consists of two team-based rounds and one individual round. Teams may
+    have up to 5 students.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-4">
+    <div class="bg-white shadow rounded-xl p-4 flex flex-col gap-2">
+      <h3 class="font-semibold text-lg">Power Round</h3>
+      <p>
+        A proof-based team round. Contestants will answer a series of questions
+        centered around a topic, culminating in incredible results in the field
+        of that chosen topic.
+      </p>
+    </div>
+
+    <div class="bg-white shadow rounded-xl p-4 flex flex-col gap-2">
+      <h3 class="font-semibold text-lg">Individual Round</h3>
+      <p>
+        Contestants complete short-answer questions ranging over a broad reach
+        of mathematical topics.
+      </p>
+    </div>
+
+    <div class="bg-white shadow rounded-xl p-4 flex flex-col gap-2">
+      <h3 class="font-semibold text-lg">Constellation Round</h3>
+      <p>
+        With realtime submission and a live scoreboard, this round not only
+        tests teams' mathematical knowledge, but also strategic planning and
+        quick thinking.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="max-w-3xl mx-auto items-center flex flex-col gap-4 px-8 py-16">
+  <h2 class="font-semibold text-2xl">Featuring…</h2>
+
+  <div class="flex gap-8 items-center">
+    <img
+      class="w-32 h-32 object-cover rounded-full"
+      src="https://3b1b-posts.us-east-1.linodeobjects.com/images/about/grant.png"
+    />
+    <div class="flex flex-col gap-2">
+      <p class="text-2xl font-bold">Grant Sanderson</p>
+      <p>
+        Lorem ipsum odor amet, consectetuer adipiscing elit. Imperdiet nulla
+        nascetur nullam vestibulum etiam a rutrum pretium. Facilisis venenatis
+        maximus et mattis quisque fames mauris gravida.
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<div class="max-w-6xl mx-auto items-center flex flex-col gap-4 px-8 py-16">
+  <h2 class="font-semibold text-2xl">Our Team</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    {% for _ in range(end=9) %}
+      <div class="flex flex-col gap-2 items-center">
+        <img class="w-24 h-24 rounded-full" src="https://placecats.com/200/200" />
+        <p class="font-semibold text-xl">Kaitlyn Du</p>
+        <p>Tournament Director, Berkeley Math Tournament (2021–2022)<br />Software Engineer, BANK OF AMERICA!!!</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="h-32">
+</div>
+
+{% endblock %}

@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+@theme {
+    --font-sans: Inter, sans-serif;
+    --color-link: var(--color-blue-500);
+}
+
+@supports (font-variation-settings: normal) {
+    @theme {
+        --font-sans: InterVariable, sans-serif;
+    }
+}
+
+#illustration {
+    background-image: url("../assets/equations.png");
+    mask-image: radial-gradient(
+        circle at 100% 20%,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.02),
+        rgba(0, 0, 0, 0)
+    );
+}
