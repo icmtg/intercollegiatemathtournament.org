@@ -47,7 +47,7 @@ jobs:
         with:
           switches: -avPh --delete --exclude=.htaccess
           path: .
-          remote_path: ~/public_html/new
+          remote_path: ~/public_html/
           remote_host: tsunami.ocf.berkeley.edu
           remote_user: icmt
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
