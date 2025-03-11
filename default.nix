@@ -6,6 +6,10 @@ stdenvNoCC.mkDerivation {
   src = ./.;
   nativeBuildInputs = [ just tailwindcss_4 zola ];
   buildPhase = ''
-    just build -o "$out" ${lib.optionalString (baseUrl != null) "--base-url ${baseUrl}"}
+    just build ${lib.optionalString (baseUrl != null) "--base-url ${baseUrl}"}
+  '';
+  installPhase = ''
+    mkdir -p "$out"
+    cp -r public/* "$out"
   '';
 }
