@@ -124,23 +124,112 @@
   </div>
 </div> -->
 
-<div class="max-w-6xl mx-auto flex flex-col gap-4 px-8 py-16">
+<div class="max-w-5xl mx-auto flex flex-col items-center gap-4 px-8 py-16">
   <h2 class="font-semibold text-2xl text-center">Our Team</h2>
 
-  <div class="grid md:grid-cols-2 gap-8">
-    {% for _ in range(end=4) %}
-      <div class="flex items-center gap-4">
-        <img class="w-24 h-24 rounded-full object-cover" src="{{ get_url(path="team/kaity.png") }}" />
-        <div>
-          <p class="font-semibold text-xl">Kaitlyn Du</p>
-          <p>Tournament Director, Berkeley Math Tournament (2021–2022)</p>
-        </div>
+  <h3 class="font-semibold text-xl text-center">Core</h3>
+  <div class="grid lg:grid-cols-2 gap-8">
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/placeholder.png") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">Aditya Baireddy</p>
+        <p>Head Problem Writer, Berkeley Math Tournament (2024–2025)</p>
       </div>
-    {% endfor %}
+    </div>
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/placeholder.png") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">Andrew Huang</p>
+        <p>Head Problem Writer, Berkeley Math Tournament (2023–2024)</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/placeholder.png") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">Austin Lei</p>
+        <p>Head Problem Writer, Berkeley Math Tournament (2019–2021)</p>
+        <p>Ph.D. Student, Columbia University</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/kaity.png") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">Kaitlyn Du</p>
+        <p>Tournament Director, Berkeley Math Tournament (2021–2022)</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/placeholder.png") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">Katherine Yu</p>
+        <p>Head Problem Writer, Stanford Math Tournament (2021–2024)</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/placeholder.png") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">Nikhil Shanbhag</p>
+        <p>Problem Writer, Berkeley Math Tournament (2022–2024)</p>
+        <p>Masters Student, Columbia University</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/oliver.jpg") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">Oliver Ni</p>
+        <p>Logistics Organizer, Berkeley Math Tournament (2020–2025)</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/placeholder.png") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">Rohit Agarwal</p>
+        <p>Problem Writer, Berkeley Math Tournament (2020–2024)</p>
+        <p>Ph.D. Student, Princeton University</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="mt-4 font-semibold text-xl text-center">Advising</h3>
+
+  <div class="grid lg:grid-cols-2 gap-8">
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/placeholder.png") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">Evan Chen</p>
+        <p>Assistant Academic Director, MOP (2016–)</p>
+        <p>Benevolent Dictator, OTIS (2015–)</p>
+        <p>IMO Gold Medalist (2014)</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/placeholder.png") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">James Leng</p>
+        <p>Head Problem Writer, Berkeley Math Tournament (2018–2019)</p>
+        <p>Ph.D. Student, UCLA</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/placeholder.png") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">Joey Heerens</p>
+        <p>Problem Czar, Harvard–MIT Math Tournament (years?)</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-6">
+      <img class="w-28 h-28 rounded-full object-cover" src="{{ get_url(path="team/placeholder.png") }}" />
+      <div class="flex flex-col gap-1 leading-6">
+        <p class="font-semibold text-xl">Justin Yokota</p>
+        <p>Head Problem Writer, Berkeley Math Tournament (2018–2019)</p>
+        <p>Lecturer in Computer Science, UC Berkeley</p>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="h-32">
+<div class="max-w-4xl mx-auto flex flex-col items-center text-sm text-gray-500 px-8 py-16">
+  <p>Copyright &copy; 2025 Intercollegiate Math Tournament Group.</p>
 </div>
 
 {% endblock %}
