@@ -27,13 +27,16 @@ jobs:
           name: result
           path: result/
 
-  deploy-cf-pages:
+  deploy-cf-workers:
     runs-on: ubuntu-latest
     needs: build
     environment:
       name: Production
       url: https://intercollegiatemathtournament.org/
     steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
