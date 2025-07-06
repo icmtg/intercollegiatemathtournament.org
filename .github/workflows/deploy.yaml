@@ -41,6 +41,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: result
+          path: result
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
