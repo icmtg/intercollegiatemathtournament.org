@@ -5,5 +5,5 @@ routes = [
 ]
 
 [assets]
-directory = "."
+directory = "./result"
 not_found_handling = "404-page"
