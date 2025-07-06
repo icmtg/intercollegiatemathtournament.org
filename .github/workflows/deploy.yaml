@@ -27,7 +27,7 @@ jobs:
           name: result
           path: result/
 
-  deploy-ocf:
+  deploy-cf-pages:
     runs-on: ubuntu-latest
     needs: build
     environment:
@@ -39,12 +39,7 @@ jobs:
         with:
           name: result
 
-      - name: Deploy to OCF
-        uses: burnett01/rsync-deployments@6.0.0
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
         with:
-          switches: -avPh --delete --exclude=.htaccess
-          path: .
-          remote_path: ~/public_html/
-          remote_host: tsunami.ocf.berkeley.edu
-          remote_user: icmt
-          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

@@ -1,0 +1,6 @@
+# https://developers.cloudflare.com/workers/static-assets/redirects/
+
+/register https://docs.google.com/forms/d/e/1FAIpQLSdzwHQnD-cc0iVgPnt8jKMEu7gFn1IMNBS6BE-p1sQMzayJqg/viewform
+/register/ /register
+/overleaf https://www.overleaf.com/project/67be64acb574ff55c37cb173
+/overleaf/ /overleaf

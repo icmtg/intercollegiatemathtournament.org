@@ -1,0 +1,9 @@
+name = "icmt"
+compatibility_date = "2025-07-06"
+routes = [
+    { pattern = "intercollegiatemathtournament.org", custom_domain = true },
+]
+
+[assets]
+directory = "./result"
+not_found_handling = "404-page"
