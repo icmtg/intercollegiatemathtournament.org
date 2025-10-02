@@ -77,6 +77,25 @@
   </div>
 </div>
 
+<div class="max-w-3xl mx-auto items-center flex flex-col gap-4 px-8 py-16">
+  <h2 class="font-semibold text-2xl">Guest Speaker</h2>
+
+  <div class="flex gap-8 items-center">
+    <img
+      class="w-32 h-32 object-cover"
+      src="{{ get_url(path="assets/brady.jpg") }}"
+    />
+    <div class="flex flex-col gap-2">
+      <p class="text-2xl font-bold">Brady Haran</p>
+      <p>
+        Brady Haran is the creator of <a href="https://www.youtube.com/numberphile" class="text-link">Numberphile</a>, along with other math and science YouTube
+        channels. His projects have over 11 million subscribers and 1.4 billion views. He is based
+        in the UK but travels the world interviewing experts and telling their stories.
+      </p>
+    </div>
+  </div>
+</div>
+
 <div class="max-w-6xl mx-auto text-center flex flex-col gap-4 px-8 py-16">
   <h2 class="font-semibold text-2xl">Contest Format</h2>
 
@@ -122,24 +141,49 @@
   </div>
 </div>
 
-<!-- <div class="max-w-3xl mx-auto items-center flex flex-col gap-4 px-8 py-16">
-  <h2 class="font-semibold text-2xl">Featuring…</h2>
+<div class="max-w-6xl mx-auto text-center flex flex-col gap-8 px-8 py-16">
+  <h2 class="font-semibold text-2xl">Sponsors</h2>
 
-  <div class="flex gap-8 items-center">
-    <img
-      class="w-32 h-32 object-cover rounded-full"
-      src="https://3b1b-posts.us-east-1.linodeobjects.com/images/about/grant.png"
-    />
-    <div class="flex flex-col gap-2">
-      <p class="text-2xl font-bold">Grant Sanderson</p>
-      <p>
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Imperdiet nulla
-        nascetur nullam vestibulum etiam a rutrum pretium. Facilisis venenatis
-        maximus et mattis quisque fames mauris gravida.
-      </p>
-    </div>
+  <div class="flex gap-x-16 gap-y-4 flex-wrap justify-center items-center">
+    <a href="https://www.hudsonrivertrading.com/">
+      <img class="max-h-32" src="{{ get_url(path="sponsors/hrt.png") }}" />
+    </a>
+    <!--<a href="https://ma.stat.columbia.edu/">
+      <img class="max-h-32" src="{{ get_url(path="sponsors/columbia-statistics.png") }}" />
+    </a>-->
   </div>
-</div> -->
+
+  <hr class="border-gray-400 border-dotted w-1/2 self-center" />
+
+  <div class="flex gap-x-16 gap-y-4 flex-wrap justify-center items-center">
+    <a href="https://www.citadel.com/">
+      <img class="max-h-16" src="{{ get_url(path="sponsors/citadel.png") }}" />
+    </a>
+    <a href="https://www.citadel.com/">
+      <img class="max-h-8" src="{{ get_url(path="sponsors/blackpenredpen.png") }}" />
+    </a>
+  </div>
+
+  <hr class="border-gray-400 border-dotted w-1/2 self-center items-center" />
+
+  <div class="flex gap-x-16 gap-y-4 flex-wrap justify-center">
+    <a href="https://www.janestreet.com/">
+      <img class="max-h-12" src="{{ get_url(path="sponsors/jane-street.png") }}" />
+    </a>
+    <a href="https://artofproblemsolving.com/">
+      <img class="max-h-12" src="{{ get_url(path="sponsors/aops.png") }}" />
+    </a>
+    <a href="https://www.math.columbia.edu/~ums/">
+      <img class="max-h-12" src="{{ get_url(path="sponsors/columbia-ums.png") }}" />
+    </a>
+    <a href="https://outreach.engineering.columbia.edu/content/society-industrial-and-applied-mathematics-cu-siam">
+      <img class="max-h-12" src="{{ get_url(path="sponsors/columbia-siam.png") }}" />
+    </a>
+    <a href="https://www.columbiaquantgroup.com/">
+      <img class="max-h-12" src="{{ get_url(path="sponsors/columbia-quant-group.png") }}" />
+    </a>
+  </div>
+</div>
 
 <div class="max-w-5xl mx-auto flex flex-col items-center gap-4 px-8 py-16">
   <h2 class="font-semibold text-2xl text-center">Our Team</h2>
