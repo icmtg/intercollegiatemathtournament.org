@@ -3,7 +3,7 @@
 stdenvNoCC.mkDerivation {
   pname = "berkeley.mt";
   version = "1.0.0";
-  src = ./.;
+  src = ./old;
   nativeBuildInputs = [ just tailwindcss_4 zola ];
   buildPhase = ''
     just build ${lib.optionalString (baseUrl != null) "--base-url ${baseUrl}"}
