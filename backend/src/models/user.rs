@@ -47,16 +47,17 @@ impl User {
     ) -> Result<Self, Box<dyn std::error::Error>> {
         let password_hash = Self::hash_password(&create_user.password)?;
 
-        let user = sqlx::query_as::<_, User>(
+        let user = sqlx::query_as!(
+            User,
             r#"
             INSERT INTO users (email, name, password_hash)
             VALUES ($1, $2, $3)
             RETURNING id, email, name, avatar_url, password_hash, created_at, updated_at
             "#,
+            create_user.email,
+            create_user.name,
+            password_hash
         )
-        .bind(&create_user.email)
-        .bind(&create_user.name)
-        .bind(&password_hash)
         .fetch_one(pool)
         .await?;
 
@@ -64,27 +65,29 @@ impl User {
     }
 
     pub async fn find_by_id(pool: &PgPool, id: Uuid) -> Result<Option<Self>, sqlx::Error> {
-        sqlx::query_as::<_, User>(
+        sqlx::query_as!(
+            User,
             r#"
             SELECT id, email, name, avatar_url, password_hash, created_at, updated_at
             FROM users
             WHERE id = $1
             "#,
+            id
         )
-        .bind(id)
         .fetch_optional(pool)
         .await
     }
 
     pub async fn find_by_email(pool: &PgPool, email: &str) -> Result<Option<Self>, sqlx::Error> {
-        sqlx::query_as::<_, User>(
+        sqlx::query_as!(
+            User,
             r#"
             SELECT id, email, name, avatar_url, password_hash, created_at, updated_at
             FROM users
             WHERE email = $1
             "#,
+            email
         )
-        .bind(email)
         .fetch_optional(pool)
         .await
     }
@@ -108,17 +111,18 @@ impl User {
         name: Option<String>,
         avatar_url: Option<String>,
     ) -> Result<Self, sqlx::Error> {
-        sqlx::query_as::<_, User>(
+        sqlx::query_as!(
+            User,
             r#"
             UPDATE users
             SET name = $2, avatar_url = $3, updated_at = NOW()
             WHERE id = $1
             RETURNING id, email, name, avatar_url, password_hash, created_at, updated_at
             "#,
+            id,
+            name,
+            avatar_url
         )
-        .bind(id)
-        .bind(&name)
-        .bind(&avatar_url)
         .fetch_one(pool)
         .await
     }
@@ -130,16 +134,17 @@ impl User {
     ) -> Result<Self, Box<dyn std::error::Error>> {
         let password_hash = Self::hash_password(new_password)?;
 
-        let user = sqlx::query_as::<_, User>(
+        let user = sqlx::query_as!(
+            User,
             r#"
             UPDATE users
             SET password_hash = $2, updated_at = NOW()
             WHERE id = $1
             RETURNING id, email, name, avatar_url, password_hash, created_at, updated_at
             "#,
+            id,
+            password_hash
         )
-        .bind(id)
-        .bind(&password_hash)
         .fetch_one(pool)
         .await?;
 
@@ -147,13 +152,13 @@ impl User {
     }
 
     pub async fn delete(pool: &PgPool, id: Uuid) -> Result<bool, sqlx::Error> {
-        let result = sqlx::query(
+        let result = sqlx::query!(
             r#"
             DELETE FROM users
             WHERE id = $1
             "#,
+            id
         )
-        .bind(id)
         .execute(pool)
         .await?;
 
