@@ -13,8 +13,8 @@ pub fn create_router(pool: PgPool) -> Router {
         .with_expiry(Expiry::OnInactivity(Duration::days(7)));
 
     Router::new()
-        .route("/health", get(health_check))
-        .nest("/auth", auth::routes())
+        .route("/api/health", get(health_check))
+        .nest("/api/auth", auth::routes())
         .layer(session_layer)
         .with_state(pool)
 }
