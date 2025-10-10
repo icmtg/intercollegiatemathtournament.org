@@ -1,18 +1,35 @@
 use anyhow::Result;
-use backend::db;
+use backend::{api, db};
+use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    let database_url = std::env::var("DATABASE_URL")
-        .expect("DATABASE_URL must be set");
+    tracing_subscriber::registry()
+        .with(
+            tracing_subscriber::EnvFilter::try_from_default_env()
+                .unwrap_or_else(|_| "backend=debug,tower_http=debug,axum=trace".into()),
+        )
+        .with(tracing_subscriber::fmt::layer())
+        .init();
 
-    println!("Connecting to database...");
+    let database_url = std::env::var("DATABASE_URL").expect("DATABASE_URL must be set");
+
+    tracing::info!("Connecting to database...");
     let pool = db::create_pool(&database_url).await?;
 
-    println!("Running migrations...");
+    tracing::info!("Running migrations...");
     db::run_migrations(&pool).await?;
-    println!("Migrations completed successfully!");
+    tracing::info!("Migrations completed successfully!");
 
-    println!("Backend initialized!");
+    let app = api::create_router(pool);
+
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
+        .await
+        .expect("Failed to bind to address");
+
+    tracing::info!("Server listening on {}", listener.local_addr()?);
+
+    axum::serve(listener, app).await?;
+
     Ok(())
 }
