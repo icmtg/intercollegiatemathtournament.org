@@ -1,5 +1,6 @@
 use anyhow::Result;
 use backend::{api, db};
+use tower_sessions_sqlx_store::PostgresStore;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 #[tokio::main]
@@ -20,6 +21,11 @@ async fn main() -> Result<()> {
     tracing::info!("Running migrations...");
     db::run_migrations(&pool).await?;
     tracing::info!("Migrations completed successfully!");
+
+    tracing::info!("Running session store migration...");
+    let session_store = PostgresStore::new(pool.clone());
+    session_store.migrate().await?;
+    tracing::info!("Session store migration completed!");
 
     let app = api::create_router(pool);
 
