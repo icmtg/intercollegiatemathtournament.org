@@ -21,6 +21,7 @@
           packages = with pkgs; [
             git
             just
+            nodejs_22
             parallel
             tailwindcss_4
             zola
