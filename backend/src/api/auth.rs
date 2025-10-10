@@ -1,16 +1,11 @@
-use axum::{
-    extract::State,
-    http::StatusCode,
-    response::Json,
-    routing::post,
-    Router,
-};
+use axum::{Router, extract::State, http::StatusCode, response::Json, routing::post};
 use serde::{Deserialize, Serialize};
-use serde_json::{json, Value};
+use serde_json::{Value, json};
 use sqlx::PgPool;
 use tower_sessions::Session;
 use uuid::Uuid;
 
+use super::error::{ApiError, ApiResult};
 use crate::models::{CreateUser, User};
 
 const SESSION_USER_ID_KEY: &str = "user_id";
@@ -58,13 +53,9 @@ async fn register(
     State(pool): State<PgPool>,
     session: Session,
     Json(payload): Json<RegisterRequest>,
-) -> Result<Json<Value>, StatusCode> {
-    if User::find_by_email(&pool, &payload.email)
-        .await
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?
-        .is_some()
-    {
-        return Err(StatusCode::CONFLICT);
+) -> ApiResult<Json<Value>> {
+    if User::find_by_email(&pool, &payload.email).await?.is_some() {
+        return Err(ApiError::UserExists);
     }
 
     let create_user = CreateUser {
@@ -73,14 +64,9 @@ async fn register(
         name: payload.name,
     };
 
-    let user = User::create(&pool, create_user)
-        .await
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    let user = User::create(&pool, create_user).await?;
 
-    session
-        .insert(SESSION_USER_ID_KEY, user.id)
-        .await
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    session.insert(SESSION_USER_ID_KEY, user.id).await?;
 
     let user_response: UserResponse = user.into();
     Ok(Json(json!({
@@ -92,16 +78,12 @@ async fn login(
     State(pool): State<PgPool>,
     session: Session,
     Json(payload): Json<LoginRequest>,
-) -> Result<Json<Value>, StatusCode> {
+) -> ApiResult<Json<Value>> {
     let user = User::authenticate(&pool, &payload.email, &payload.password)
-        .await
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?
-        .ok_or(StatusCode::UNAUTHORIZED)?;
+        .await?
+        .ok_or(ApiError::InvalidCredentials)?;
 
-    session
-        .insert(SESSION_USER_ID_KEY, user.id)
-        .await
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    session.insert(SESSION_USER_ID_KEY, user.id).await?;
 
     let user_response: UserResponse = user.into();
     Ok(Json(json!({
@@ -109,11 +91,7 @@ async fn login(
     })))
 }
 
-async fn logout(session: Session) -> Result<StatusCode, StatusCode> {
-    session
-        .delete()
-        .await
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
-
+async fn logout(session: Session) -> ApiResult<StatusCode> {
+    session.delete().await?;
     Ok(StatusCode::OK)
 }

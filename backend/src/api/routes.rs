@@ -1,11 +1,5 @@
-use axum::{
-    extract::State,
-    http::StatusCode,
-    response::Json,
-    routing::get,
-    Router,
-};
-use serde_json::{json, Value};
+use axum::{Router, extract::State, http::StatusCode, response::Json, routing::get};
+use serde_json::{Value, json};
 use sqlx::PgPool;
 use time::Duration;
 use tower_sessions::{Expiry, SessionManagerLayer};
