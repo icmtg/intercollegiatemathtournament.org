@@ -5,7 +5,7 @@ use time::Duration;
 use tower_sessions::{Expiry, SessionManagerLayer};
 use tower_sessions_sqlx_store::PostgresStore;
 
-use super::auth;
+use super::{auth, participants};
 
 pub fn create_router(pool: PgPool) -> Router {
     let session_store = PostgresStore::new(pool.clone());
@@ -15,6 +15,7 @@ pub fn create_router(pool: PgPool) -> Router {
     Router::new()
         .route("/api/health", get(health_check))
         .nest("/api/auth", auth::routes())
+        .nest("/api", participants::routes())
         .layer(session_layer)
         .with_state(pool)
 }

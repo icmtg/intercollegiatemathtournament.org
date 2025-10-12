@@ -19,18 +19,26 @@ pub enum ApiError {
     #[error("Invalid credentials")]
     InvalidCredentials,
 
+    #[error("Not found")]
+    NotFound,
+
+    #[error("Bad request: {0}")]
+    BadRequest(String),
+
     #[error("Internal server error")]
     Internal(#[from] Box<dyn std::error::Error>),
 }
 
 impl IntoResponse for ApiError {
     fn into_response(self) -> Response {
-        let (status, message) = match self {
-            ApiError::Database(_) => (StatusCode::INTERNAL_SERVER_ERROR, "Database error"),
-            ApiError::Session(_) => (StatusCode::INTERNAL_SERVER_ERROR, "Session error"),
-            ApiError::UserExists => (StatusCode::CONFLICT, "User already exists"),
-            ApiError::InvalidCredentials => (StatusCode::UNAUTHORIZED, "Invalid credentials"),
-            ApiError::Internal(_) => (StatusCode::INTERNAL_SERVER_ERROR, "Internal server error"),
+        let (status, message) = match &self {
+            ApiError::Database(_) => (StatusCode::INTERNAL_SERVER_ERROR, "Database error".to_string()),
+            ApiError::Session(_) => (StatusCode::INTERNAL_SERVER_ERROR, "Session error".to_string()),
+            ApiError::UserExists => (StatusCode::CONFLICT, "User already exists".to_string()),
+            ApiError::InvalidCredentials => (StatusCode::UNAUTHORIZED, "Invalid credentials".to_string()),
+            ApiError::NotFound => (StatusCode::NOT_FOUND, "Not found".to_string()),
+            ApiError::BadRequest(msg) => (StatusCode::BAD_REQUEST, msg.clone()),
+            ApiError::Internal(_) => (StatusCode::INTERNAL_SERVER_ERROR, "Internal server error".to_string()),
         };
 
         let body = Json(json!({

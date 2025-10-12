@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useState, FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import { register } from "../lib/api";
 
 export const Route = createFileRoute("/register")({
