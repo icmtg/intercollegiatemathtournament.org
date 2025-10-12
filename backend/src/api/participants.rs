@@ -10,8 +10,8 @@ use crate::models::{CreateParticipant, Event, Participant};
 pub fn routes() -> Router<PgPool> {
     Router::new()
         .route("/events", get(list_events))
-        .route("/events/:event_id/register", post(register_participant))
-        .route("/events/:event_id/participants", get(list_participants))
+        .route("/events/{event_id}/register", post(register_participant))
+        .route("/events/{event_id}/participants", get(list_participants))
 }
 
 #[derive(Debug, Deserialize)]
