@@ -1,5 +1,8 @@
 use anyhow::Result;
-use backend::{api, db, models::{CreateEvent, Event}};
+use backend::{
+    api, db,
+    models::{CreateEvent, Event},
+};
 use chrono::{TimeZone, Utc};
 use tower_sessions_sqlx_store::PostgresStore;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
