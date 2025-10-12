@@ -1,5 +1,6 @@
 use anyhow::Result;
 use backend::{api, db, models::{CreateEvent, Event}};
+use chrono::{TimeZone, Utc};
 use tower_sessions_sqlx_store::PostgresStore;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
@@ -52,13 +53,16 @@ async fn ensure_default_event(pool: &sqlx::PgPool) -> Result<()> {
     if event_count == 0 {
         tracing::info!("No events found, creating default ICMT 2026 event...");
 
+        // February 28, 2026 - both start and end date
+        let event_date = Utc.with_ymd_and_hms(2026, 2, 28, 0, 0, 0).unwrap();
+
         // TODO: Update these placeholder values with actual event details
         let create_event = CreateEvent {
             name: "ICMT 2026".to_string(),
             description: Some("TODO: Add event description here".to_string()),
             location: Some("TODO: Add event location here".to_string()),
-            start_date: None,
-            end_date: None,
+            start_date: Some(event_date),
+            end_date: Some(event_date),
             registration_open: true,
         };
 
