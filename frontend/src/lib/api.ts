@@ -1,7 +1,7 @@
 interface RegisterData {
   email: string;
   password: string;
-  name?: string;
+  name: string;
 }
 
 interface LoginData {
@@ -13,7 +13,7 @@ interface UserResponse {
   user: {
     id: string;
     email: string;
-    name: string | null;
+    name: string;
     avatar_url: string | null;
   };
 }

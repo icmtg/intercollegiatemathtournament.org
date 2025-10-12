@@ -11,7 +11,7 @@ use uuid::Uuid;
 pub struct User {
     pub id: Uuid,
     pub email: String,
-    pub name: Option<String>,
+    pub name: String,
     pub avatar_url: Option<String>,
     #[serde(skip_serializing)]
     pub password_hash: String,
@@ -23,7 +23,7 @@ pub struct User {
 pub struct CreateUser {
     pub email: String,
     pub password: String,
-    pub name: Option<String>,
+    pub name: String,
 }
 
 impl User {
@@ -108,7 +108,7 @@ impl User {
     pub async fn update(
         pool: &PgPool,
         id: Uuid,
-        name: Option<String>,
+        name: String,
         avatar_url: Option<String>,
     ) -> Result<Self, sqlx::Error> {
         sqlx::query_as!(

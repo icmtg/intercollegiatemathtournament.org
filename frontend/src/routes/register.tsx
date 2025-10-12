@@ -20,7 +20,7 @@ function Register() {
     setLoading(true);
 
     try {
-      await register({ email, password, name: name || undefined });
+      await register({ email, password, name });
       navigate({ to: "/" });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Registration failed");
@@ -53,10 +53,11 @@ function Register() {
                 name="name"
                 type="text"
                 autoComplete="name"
+                required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                placeholder="Name (optional)"
+                placeholder="Name"
               />
             </div>
             <div>

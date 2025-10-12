@@ -21,7 +21,7 @@ pub fn routes() -> Router<PgPool> {
 struct RegisterRequest {
     email: String,
     password: String,
-    name: Option<String>,
+    name: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -34,7 +34,7 @@ struct LoginRequest {
 struct UserResponse {
     id: Uuid,
     email: String,
-    name: Option<String>,
+    name: String,
     avatar_url: Option<String>,
 }
 
