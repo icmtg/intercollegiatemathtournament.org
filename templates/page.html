@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex flex-col max-w-4xl mx-auto py-16 px-8 gap-8">
+  <header class="self-center flex flex-col items-center">
+    <div class="flex items-center gap-8">
+      <img src="{{ get_url(path="assets/logo.svg") }}" alt="ICMT Logo" class="h-16" />
+      <div class="flex flex-col">
+        <span class="font-bold text-xl">Intercollegiate Math Tournament</span>
+        <div class="flex gap-4 text-gray-600">
+          <span>Columbia University</span>
+          <span>February 28, 2026</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <a href="/" class="self-center text-link">Back to Home</a>
+
+  <div class="prose max-w-none">
+    {{ page.content | safe }}
+  </div>
+</div>
+{% endblock %}

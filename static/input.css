@@ -1,22 +1,33 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@config "../tailwind.config.js";
 
 @theme {
-    --font-sans: Inter, sans-serif;
-    --color-link: var(--color-blue-500);
+  --font-sans: Inter, sans-serif;
+}
+
+@utility text-link {
+  color: var(--color-blue-500);
+  box-shadow: inset 0 -0.4em var(--color-blue-100);
+  transition: box-shadow 150ms ease-in-out;
+
+  &:hover {
+    box-shadow: inset 0 -0.6em var(--color-blue-200);
+  }
 }
 
 @supports (font-variation-settings: normal) {
-    @theme {
-        --font-sans: InterVariable, sans-serif;
-    }
+  @theme {
+    --font-sans: InterVariable, sans-serif;
+  }
 }
 
 #illustration {
-    background-image: url("../assets/equations.png");
-    mask-image: radial-gradient(
-        circle at 100% 20%,
-        rgba(0, 0, 0, 0.1),
-        rgba(0, 0, 0, 0.02),
-        rgba(0, 0, 0, 0)
-    );
+  background-image: url("../assets/equations.png");
+  mask-image: radial-gradient(
+    circle at 100% 20%,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.02),
+    rgba(0, 0, 0, 0)
+  );
 }
