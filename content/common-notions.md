@@ -1,5 +1,5 @@
 +++
-title = "Common mathematical notions"
+title = "Common Mathematical Notions"
 date = 2026-02-28
 +++
 
