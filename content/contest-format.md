@@ -51,18 +51,18 @@ Your team's score is the sum of the following four categories:
 **Depth Bonus:** Bonus points are awarded for solving multiple problems in the same constellation.
 - Within a constellation, $3(N - 1)$ bonus points are awarded on the $N$th correct answer, for a total bonus of $3N(N - 1)/2$ depth points per constellation.
 
-| Problems solved in constellation | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
-| -------------------------------- | - | - | - | - | -- | -- | -- |
-| Total Depth Bonus                | 0 | 0 | 3 | 9 | 18 | 30 | 45 |
+  | Problems solved in constellation | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+  | -------------------------------- | - | - | - | - | -- | -- | -- |
+  | Total Depth Bonus                | 0 | 0 | 3 | 9 | 18 | 30 | 45 |
 
 - The maximum number of depth bonus points is $6 \times 45 = \mathbf{270}$.
 
 **Breadth Bonus:** Bonus points are awarded for solving problems in every constellation.
 - For $N > 0$, $18N + 24$ bonus points are awarded upon solving at least $N$ problems in each of the 6 constellations, for a total bonus of $9N(N + 1) + 24N$ breadth points.
 
-| Problems solved in every constellation | 0 | 1  | 2   | 3   | 4   | 5   | 6   |
-| -------------------------------------- | - | -- | --- | --- | --- | --- | --- |
-| Total Breadth Bonus                    | 0 | 42 | 102 | 180 | 276 | 390 | 522 |
+  | Problems solved in every constellation | 0 | 1  | 2   | 3   | 4   | 5   | 6   |
+  | -------------------------------------- | - | -- | --- | --- | --- | --- | --- |
+  | Total Breadth Bonus                    | 0 | 42 | 102 | 180 | 276 | 390 | 522 |
 
 The maximum score on the Division A Constellation Round is $660 + 585 + 270 + 522 = \mathbf{2037}$ points.
 
@@ -93,18 +93,18 @@ Your team's score is the sum of the following four categories:
 **Depth Bonus:** Bonus points are awarded for solving multiple problems in the same constellation.
 - Within a constellation, $3(N - 1)$ bonus points are awarded on the $N$th correct answer, for a total bonus of $3N(N - 1)/2$ depth points per constellation.
 
-| Problems solved in constellation | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
-| -------------------------------- | - | - | - | - | -- | -- | -- |
-| Total Depth Bonus                | 0 | 0 | 3 | 9 | 18 | 30 | 45 |
+  | Problems solved in constellation | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+  | -------------------------------- | - | - | - | - | -- | -- | -- |
+  | Total Depth Bonus                | 0 | 0 | 3 | 9 | 18 | 30 | 45 |
 
 - The maximum number of depth bonus points is $5 \times 45 = \mathbf{225}$.
 
 **Breadth Bonus:** Bonus points are awarded for solving problems in every constellation.
 - For $N > 0$, $15N + 20$ bonus points are awarded upon solving at least $N$ problems in each of the 5 constellations, for a total bonus of $15N(N + 1)/2 + 20N$ breadth points.
 
-| Problems solved in every constellation | 0 | 1  | 2  | 3   | 4   | 5   | 6   |
-| -------------------------------------- | - | -- | -- | --- | --- | --- | --- |
-| Total Breadth Bonus                    | 0 | 35 | 85 | 150 | 230 | 325 | 435 |
+  | Problems solved in every constellation | 0 | 1  | 2  | 3   | 4   | 5   | 6   |
+  | -------------------------------------- | - | -- | -- | --- | --- | --- | --- |
+  | Total Breadth Bonus                    | 0 | 35 | 85 | 150 | 230 | 325 | 435 |
 
 The maximum score on the Division B Constellation Round is $570 + 495 + 225 + 435 = \mathbf{1725}$ points.
 
