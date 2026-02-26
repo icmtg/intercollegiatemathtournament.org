@@ -5,16 +5,57 @@ date = 2026-02-28
 
 ## Schedule of Events
 
-| Time | Event | Location |
-| ---- | ----- | -------- |
-| 7:30 AM | Check-in | Lerner Auditorium at the Broadway Entrance (next to campus bookstore) |
-| 8:30 AM | Opening Ceremony & Numberphile Keynote Speech | Lerner Auditorium |
-| 9:30 AM | Power Round | Division A — Low Library Rotunda; Division B — Lerner Auditorium |
-| 11:30 AM | Constellation Round | Division A — Low Library Rotunda; Division B — Lerner Auditorium |
-| 1:30 PM | Lunch & Sponsor Swag Booths | See below |
-| 2:45 PM | Individual Round | Division A — Low Library Rotunda; Division B — Uris 301 (Last Names A–S), Uris 142 (Last Names T–Z) |
-| 4:15 PM | Activities | See below |
-| 6:15 PM | Awards Ceremony | Division A — Low Library Rotunda; Division B — Lerner Cinema |
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Event</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7:30 AM</td>
+      <td><strong>Check-in</strong></td>
+      <td>Lerner Auditorium<br>at the Broadway Entrance<br>(next to campus bookstore)</td>
+    </tr>
+    <tr>
+      <td>8:30 AM</td>
+      <td><strong>Opening Ceremony</strong><br>&amp; Numberphile Keynote Speech</td>
+      <td>Lerner Auditorium</td>
+    </tr>
+    <tr>
+      <td>9:30 AM</td>
+      <td><strong>Power Round</strong></td>
+      <td><strong>Div A</strong> — Low Library Rotunda<br><strong>Div B</strong> — Lerner Auditorium</td>
+    </tr>
+    <tr>
+      <td>11:30 AM</td>
+      <td><strong>Constellation Round</strong></td>
+      <td><strong>Div A</strong> — Low Library Rotunda<br><strong>Div B</strong> — Lerner Auditorium</td>
+    </tr>
+    <tr>
+      <td>1:30 PM</td>
+      <td><strong>Lunch</strong><br>&amp; Sponsor Swag Booths</td>
+      <td><a href="#lunch-130-pm">See below</a></td>
+    </tr>
+    <tr>
+      <td>2:45 PM</td>
+      <td><strong>Individual Round</strong></td>
+      <td><strong>Div A</strong> — Low Library Rotunda<br><strong>Div B</strong> — Uris 301 (Last Names A–S),<br>Uris 142 (Last Names T–Z)</td>
+    </tr>
+    <tr>
+      <td>4:15 PM</td>
+      <td><strong>Activities</strong></td>
+      <td><a href="#activities-415-pm">See below</a></td>
+    </tr>
+    <tr>
+      <td>6:15 PM</td>
+      <td><strong>Awards Ceremony</strong></td>
+      <td><strong>Div A</strong> — Low Library Rotunda<br><strong>Div B</strong> — Lerner Cinema</td>
+    </tr>
+  </tbody>
+</table>
 
 For any directions, questions, or concerns, ask an ICMT staff member in a dark blue shirt. Columbia Public Safety Emergency Line: **(212) 854-5555**.
 
