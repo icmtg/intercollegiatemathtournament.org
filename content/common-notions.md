@@ -3,7 +3,7 @@ title = "Common Mathematical Notions"
 date = 2026-02-28
 +++
 
-1. Answers should be exact and simplified. For more information on valid answer formats, see the [Acceptable Answer Formats](/answer-formats.pdf) document.
+1. Answers should be exact and simplified. For more information on valid answer formats, see the [acceptable answer formats](/answer-formats.pdf) document.
 
 2. If a diagram is given with a problem, it is not necessarily drawn to scale.
 
