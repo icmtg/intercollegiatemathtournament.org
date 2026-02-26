@@ -3,7 +3,7 @@ title = "Logistics"
 date = 2026-02-28
 +++
 
-You can also download the full [Tournament Guide PDF](/assets/tournament-guide.pdf).
+For a printable summary of event logistics, download the [Tournament Guide PDF](/assets/tournament-guide.pdf).
 
 ## General Reminders
 
