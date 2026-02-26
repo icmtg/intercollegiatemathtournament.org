@@ -17,6 +17,28 @@
 
   <a href="/" class="self-center text-link">Back to Home</a>
 
+  {% set is_tabbed = page.permalink is ending_with("/icmt-2026/") or page.permalink is ending_with("/logistics/") or page.permalink is ending_with("/contest-format/") %}
+
+  {% if is_tabbed %}
+  <nav class="flex border-b border-gray-200">
+    {% if page.permalink is ending_with("/icmt-2026/") %}
+      <a href="/icmt-2026/" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600 -mb-px">Registration</a>
+    {% else %}
+      <a href="/icmt-2026/" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 border-b-2 border-transparent -mb-px">Registration</a>
+    {% endif %}
+    {% if page.permalink is ending_with("/logistics/") %}
+      <a href="/logistics/" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600 -mb-px">Logistics</a>
+    {% else %}
+      <a href="/logistics/" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 border-b-2 border-transparent -mb-px">Logistics</a>
+    {% endif %}
+    {% if page.permalink is ending_with("/contest-format/") %}
+      <a href="/contest-format/" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600 -mb-px">Contest Format</a>
+    {% else %}
+      <a href="/contest-format/" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 border-b-2 border-transparent -mb-px">Contest Format</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+
   <div class="prose max-w-none">
     {{ page.content | safe }}
   </div>

@@ -1,0 +1,78 @@
++++
+title = "Logistics"
+date = 2026-02-28
++++
+
+## Schedule of Events
+
+| Time | Event | Location |
+| ---- | ----- | -------- |
+| 7:30 AM | Check-in | Lerner Auditorium at the Broadway Entrance (next to campus bookstore) |
+| 8:30 AM | Opening Ceremony & Numberphile Keynote Speech | Lerner Auditorium |
+| 9:30 AM | Power Round | Division A — Low Library Rotunda; Division B — Lerner Auditorium |
+| 11:30 AM | Constellation Round | Division A — Low Library Rotunda; Division B — Lerner Auditorium |
+| 1:30 PM | Lunch & Sponsor Swag Booths | See below |
+| 2:45 PM | Individual Round | Division A — Low Library Rotunda; Division B — Uris 301 (Last Names A–S), Uris 142 (Last Names T–Z) |
+| 4:15 PM | Activities | See below |
+| 6:15 PM | Awards Ceremony | Division A — Low Library Rotunda; Division B — Lerner Cinema |
+
+For any directions, questions, or concerns, ask an ICMT staff member in a dark blue shirt. Columbia Public Safety Emergency Line: **(212) 854-5555**.
+
+## Lunch (1:30 PM)
+
+Lunch pick-up is outside Lerner Auditorium in the North Lobby. Lunch is generously organized by the Columbia Statistics Department. Both vegetarian and non-vegetarian options will be provided.
+
+**Sponsor Swag Pick-up:**
+- Cognition & Susquehanna Swag — Rotunda Lobby
+- HRT & Citadel Booths & Swag — Lerner Auditorium
+
+### Columbia Grad School Statistics Event
+
+*Low Library Rotunda*
+
+Interested in graduate school? Join the Columbia University Department of Statistics and Gabriel Young, Director of the MA Program, to learn about the M.A. tracks, program highlights, and academic and professional opportunities available to students. The program is designed to prepare students for professional positions or doctoral programs in statistics and other quantitative-based fields.
+
+## Activities (4:15 PM)
+
+### HRT Puzzle Hunt
+
+*Low Library Rotunda*
+
+Step into the HRT Puzzle Hunt, where an extraordinary mystery is unfolding: the color orange has vanished from the world. City streets, bustling marketplaces, gourmet kitchens, and dazzling gem shops have all lost a key part of their vibrancy. Everyday objects and lively scenes now appear incomplete, prompting questions from artists, scientists, and the public alike. As an investigator, you'll explore affected businesses, uncover clues hidden in ordinary details, and help restore the world's full spectrum. Your sharp observation and creativity are needed — join us to bring back what has been lost and experience a puzzle hunt unlike any other, proudly hosted by HRT.
+
+### Integration Bee Finals
+
+*Uris 301*
+
+Watch the Top 8 Integrators face off in a tournament-style bracket to be crowned the ICMT Integration Bee Champion! Integrals written by Alex Yang, author of *More Unimaginable and Speedy Integration Techniques*.
+
+### Problem Disputes
+
+*Lerner 302*
+
+If a student believes that an answer given on the answer key is incorrect, they must submit an appeal in writing in Lerner 302. **The deadline to submit appeals is 5 PM.** All decisions of the ICMT coordinators are final.
+
+## Travel and Accommodations
+
+Teams are responsible for arranging their own travel and lodging. Columbia University has secured discounted rates at a few [local hotels](https://visit.columbia.edu/content/accommodations-0).
+
+### Lodging Options
+
+Due to heavy regulation of short-term rentals in New York City, Airbnb options are limited. For more affordable accommodations, we recommend:
+
+- Hotels in New Jersey along the [Northeast Corridor NJ Transit line](https://www.njtransit.com/abc_northeast_corridor)
+- Hotels in Jersey City or Hoboken along the [PATH line](https://www.panynj.gov/path/en/schedules-maps.html)
+
+Please note that check-in begins at 7:30 AM at Columbia University.
+
+### Transportation
+
+We strongly recommend using public transportation. For those who choose to drive, these are the [parking decks](https://visit.columbia.edu/content/parking) recommended by the Columbia Visitor Center.
+
+**By Train**: If traveling by Amtrak, trains arrive at Penn Station (Moynihan Train Hall). From there, take the Uptown 1 train to 116th Street.
+
+**By Air**: Columbia University is accessible from all three major New York City airports:
+
+- **From LGA (LaGuardia)**: Take the M60 SBS bus directly to Columbia University (116th Street stop).
+- **From JFK (Kennedy)**: Take the AirTrain to Jamaica Station or Howard Beach, then take the subway to Penn Station or Port Authority Bus Terminal, then take the Uptown 1 train to 116th Street.
+- **From EWR (Newark)**: Take NJ Transit to Penn Station, then take the Uptown 1 train to 116th Street.
