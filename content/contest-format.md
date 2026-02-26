@@ -5,7 +5,7 @@ date = 2026-02-28
 
 ICMT consists of three rounds: the **Power Round**, the **Constellation Round**, and the **Individual Round**. The two divisions have separate rankings; scores in one division do not affect the other.
 
-All answers must be submitted according to the [acceptable answer formats document](/answer-formats.pdf). Answers not submitted in the specified formats will be marked incorrect, even if mathematically equivalent. See also the [common mathematical notions](/common-notions) page for notation conventions used in the contest.
+All answers must be submitted according to the [acceptable answer formats document](/answer-formats.pdf). Answers not submitted in the specified formats will be marked incorrect, even if mathematically equivalent. See also the [common mathematical notions](/assets/common-notions.pdf) document for notation conventions used in the contest.
 
 ## Power Round
 
