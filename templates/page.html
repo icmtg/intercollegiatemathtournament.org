@@ -20,7 +20,7 @@
   {% set is_tabbed = page.permalink is ending_with("/icmt-2026/") or page.permalink is ending_with("/logistics/") or page.permalink is ending_with("/contest-format/") %}
 
   {% if is_tabbed %}
-  <nav class="flex border-b border-gray-200">
+  <nav class="flex justify-center border-b border-gray-200">
     {% if page.permalink is ending_with("/icmt-2026/") %}
       <a href="/icmt-2026/" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600 -mb-px">Registration</a>
     {% else %}
