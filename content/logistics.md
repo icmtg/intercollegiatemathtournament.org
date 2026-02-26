@@ -66,7 +66,7 @@ For any directions, questions, or concerns, ask an ICMT staff member in a dark b
     <tr>
       <td>1:30 PM</td>
       <td><strong>Lunch</strong><br>&amp; Sponsor Swag Booths</td>
-      <td><a href="#lunch-130-pm">See below</a></td>
+      <td><a href="#lunch-1-30-pm">See below</a></td>
     </tr>
     <tr>
       <td>2:45 PM</td>
@@ -76,7 +76,7 @@ For any directions, questions, or concerns, ask an ICMT staff member in a dark b
     <tr>
       <td>4:15 PM</td>
       <td><strong>Activities</strong></td>
-      <td><a href="#activities-415-pm">See below</a></td>
+      <td><a href="#activities-4-15-pm">See below</a></td>
     </tr>
     <tr>
       <td>6:15 PM</td>
