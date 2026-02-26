@@ -3,6 +3,8 @@ title = "Logistics"
 date = 2026-02-28
 +++
 
+You can also download the full [Tournament Guide PDF](/assets/tournament-guide.pdf).
+
 ## General Reminders
 
 For any day-of directions, questions, or concerns, ask an ICMT staff member or volunteer, who you can identify by their **dark blue ICMT shirt**.
