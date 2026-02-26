@@ -3,11 +3,30 @@ title = "Logistics"
 date = 2026-02-28
 +++
 
+## General Reminders
+
+For any day-of directions, questions, or concerns, ask an ICMT staff member or volunteer, who you can identify by their **dark blue ICMT shirt**.
+
+An annotated [campus map](#campus-map) is provided at the bottom of this page.
+
+Columbia Public Safety Emergency Line: **(212) 854-5555**.
+
 ## Arrival and Check-in
 
 Check-in will happen from **7:30 AM to 8:30 AM** in Lerner Auditorium at the Broadway Entrance (next to the campus bookstore). See the [campus map](#campus-map) at the bottom of this page.
 
-For any directions, questions, or concerns, ask an ICMT staff member in a dark blue shirt. Columbia Public Safety Emergency Line: **(212) 854-5555**.
+Check-in closes promptly at 8:30 AM, so please be on time. If you arrive after this time, your team will be late to the Power Round, which puts them at a great disadvantage.
+
+### What to Bring
+
+We suggest students bring the following items to ICMT:
+
+- Multiple pencils and erasers
+- A water bottle to stay hydrated throughout the day
+- Layers of clothing (temperatures can vary between buildings)
+- A backpack or small bag for carrying materials and swag
+
+Scratch paper will be provided for all participants, so please do not bring your own. Calculators and graph paper are prohibited. Protractors, rulers, and compasses are permitted.
 
 ### Travel and Transportation
 
