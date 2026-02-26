@@ -3,6 +3,35 @@ title = "Logistics"
 date = 2026-02-28
 +++
 
+## Travel and Transportation
+
+We strongly recommend using public transportation. For those who choose to drive, these are the [parking decks](https://visit.columbia.edu/content/parking) recommended by the Columbia Visitor Center.
+
+**By Train**: If traveling by Amtrak, trains arrive at Penn Station (Moynihan Train Hall). From there, take the Uptown 1 train to 116th Street.
+
+**By Air**: Columbia University is accessible from all three major New York City airports:
+
+- **From LGA (LaGuardia)**: Take the M60 SBS bus directly to Columbia University (116th Street stop).
+- **From JFK (Kennedy)**: Take the AirTrain to Jamaica Station or Howard Beach, then take the subway to Penn Station or Port Authority Bus Terminal, then take the Uptown 1 train to 116th Street.
+- **From EWR (Newark)**: Take NJ Transit to Penn Station, then take the Uptown 1 train to 116th Street.
+
+### Lodging
+
+Teams are responsible for arranging their own travel and lodging. Columbia University has secured discounted rates at a few [local hotels](https://visit.columbia.edu/content/accommodations-0).
+
+Due to heavy regulation of short-term rentals in New York City, Airbnb options are limited. For more affordable accommodations, we recommend:
+
+- Hotels in New Jersey along the [Northeast Corridor NJ Transit line](https://www.njtransit.com/abc_northeast_corridor)
+- Hotels in Jersey City or Hoboken along the [PATH line](https://www.panynj.gov/path/en/schedules-maps.html)
+
+Please note that check-in begins at 7:30 AM at Columbia University.
+
+## Arrival and Check-in
+
+Check-in will happen from **7:30 AM to 8:30 AM** in Lerner Auditorium at the Broadway Entrance (next to the campus bookstore). See the [campus map](#campus-map) at the bottom of this page.
+
+For any directions, questions, or concerns, ask an ICMT staff member in a dark blue shirt. Columbia Public Safety Emergency Line: **(212) 854-5555**.
+
 ## Schedule of Events
 
 <table>
@@ -57,8 +86,6 @@ date = 2026-02-28
   </tbody>
 </table>
 
-For any directions, questions, or concerns, ask an ICMT staff member in a dark blue shirt. Columbia Public Safety Emergency Line: **(212) 854-5555**.
-
 ## Lunch (1:30 PM)
 
 Lunch pick-up is outside Lerner Auditorium in the North Lobby. Lunch is generously organized by the Columbia Statistics Department. Both vegetarian and non-vegetarian options will be provided.
@@ -93,27 +120,6 @@ Watch the Top 8 Integrators face off in a tournament-style bracket to be crowned
 
 If a student believes that an answer given on the answer key is incorrect, they must submit an appeal in writing in Lerner 302. **The deadline to submit appeals is 5 PM.** All decisions of the ICMT coordinators are final.
 
-## Travel and Accommodations
+## Campus Map
 
-Teams are responsible for arranging their own travel and lodging. Columbia University has secured discounted rates at a few [local hotels](https://visit.columbia.edu/content/accommodations-0).
-
-### Lodging Options
-
-Due to heavy regulation of short-term rentals in New York City, Airbnb options are limited. For more affordable accommodations, we recommend:
-
-- Hotels in New Jersey along the [Northeast Corridor NJ Transit line](https://www.njtransit.com/abc_northeast_corridor)
-- Hotels in Jersey City or Hoboken along the [PATH line](https://www.panynj.gov/path/en/schedules-maps.html)
-
-Please note that check-in begins at 7:30 AM at Columbia University.
-
-### Transportation
-
-We strongly recommend using public transportation. For those who choose to drive, these are the [parking decks](https://visit.columbia.edu/content/parking) recommended by the Columbia Visitor Center.
-
-**By Train**: If traveling by Amtrak, trains arrive at Penn Station (Moynihan Train Hall). From there, take the Uptown 1 train to 116th Street.
-
-**By Air**: Columbia University is accessible from all three major New York City airports:
-
-- **From LGA (LaGuardia)**: Take the M60 SBS bus directly to Columbia University (116th Street stop).
-- **From JFK (Kennedy)**: Take the AirTrain to Jamaica Station or Howard Beach, then take the subway to Penn Station or Port Authority Bus Terminal, then take the Uptown 1 train to 116th Street.
-- **From EWR (Newark)**: Take NJ Transit to Penn Station, then take the Uptown 1 train to 116th Street.
+![ICMT 2026 Campus Map](/assets/campus-map.png)
