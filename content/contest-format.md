@@ -41,12 +41,12 @@ Your team's score is the sum of the following four categories:
 
 **Base Points:** Each correct answer receives 15 points. Incorrect answers receive 0 points.
 - One problem (Problem 4) has a different scoring system (which will be revealed during the test), and is worth up to 75 points. It is ineligible for bonus points.
-- The maximum number of base points is $15 \cdot 39 + 75 = \mathbf{660}$.
+- The maximum number of base points is $15 \times 39 + 75 = \mathbf{660}$.
 
 **Speed Bonus:** Bonus points are awarded for solving problems before other teams.
 - The $N$th team to solve a problem will receive $\max(16 - N, 0)$ bonus points. In other words, the first team to solve a problem will receive 15 bonus points, the second team will receive 14 bonus points, etc. The sixteenth team and later teams will receive no bonus points.
 - We expect roughly 70 teams to be competing.
-- The maximum number of speed bonus points is $15 \cdot 39 = \mathbf{585}$.
+- The maximum number of speed bonus points is $15 \times 39 = \mathbf{585}$.
 
 **Depth Bonus:** Bonus points are awarded for solving multiple problems in the same constellation.
 - Within a constellation, $3(N - 1)$ bonus points are awarded on the $N$th correct answer, for a total bonus of $3N(N - 1)/2$ depth points per constellation.
@@ -83,12 +83,12 @@ Your team's score is the sum of the following four categories:
 
 **Base Points:** Each correct answer receives 15 points. Incorrect answers receive 0 points.
 - One problem (Problem 4) has a different scoring system (which will be revealed during the test), and is worth up to 75 points. It is ineligible for bonus points.
-- The maximum number of base points is $15 \cdot 33 + 75 = \mathbf{570}$.
+- The maximum number of base points is $15 \times 33 + 75 = \mathbf{570}$.
 
 **Speed Bonus:** Bonus points are awarded for solving problems before other teams.
 - The $N$th team to solve a problem will receive $\max(16 - N, 0)$ bonus points. In other words, the first team to solve a problem will receive 15 bonus points, the second team will receive 14 bonus points, etc. The sixteenth team and later teams will receive no bonus points.
 - We expect roughly 70 teams to be competing.
-- The maximum number of speed bonus points is $15 \cdot 33 = \mathbf{495}$.
+- The maximum number of speed bonus points is $15 \times 33 = \mathbf{495}$.
 
 **Depth Bonus:** Bonus points are awarded for solving multiple problems in the same constellation.
 - Within a constellation, $3(N - 1)$ bonus points are awarded on the $N$th correct answer, for a total bonus of $3N(N - 1)/2$ depth points per constellation.
