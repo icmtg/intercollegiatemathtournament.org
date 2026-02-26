@@ -3,7 +3,13 @@ title = "Logistics"
 date = 2026-02-28
 +++
 
-## Travel and Transportation
+## Arrival and Check-in
+
+Check-in will happen from **7:30 AM to 8:30 AM** in Lerner Auditorium at the Broadway Entrance (next to the campus bookstore). See the [campus map](#campus-map) at the bottom of this page.
+
+For any directions, questions, or concerns, ask an ICMT staff member in a dark blue shirt. Columbia Public Safety Emergency Line: **(212) 854-5555**.
+
+### Travel and Transportation
 
 We strongly recommend using public transportation. For those who choose to drive, these are the [parking decks](https://visit.columbia.edu/content/parking) recommended by the Columbia Visitor Center.
 
@@ -25,12 +31,6 @@ Due to heavy regulation of short-term rentals in New York City, Airbnb options a
 - Hotels in Jersey City or Hoboken along the [PATH line](https://www.panynj.gov/path/en/schedules-maps.html)
 
 Please note that check-in begins at 7:30 AM at Columbia University.
-
-## Arrival and Check-in
-
-Check-in will happen from **7:30 AM to 8:30 AM** in Lerner Auditorium at the Broadway Entrance (next to the campus bookstore). See the [campus map](#campus-map) at the bottom of this page.
-
-For any directions, questions, or concerns, ask an ICMT staff member in a dark blue shirt. Columbia Public Safety Emergency Line: **(212) 854-5555**.
 
 ## Schedule of Events
 
