@@ -19,6 +19,10 @@ window.initTimer = function initTimer() {
   });
 
   const query = getQueryParams();
+  const queryTitle = query.get("title");
+  if (queryTitle) {
+    document.title = queryTitle;
+  }
   const queryTime = query.get("time");
   if (queryTime) {
     $("#timerInput").val(queryTime);
