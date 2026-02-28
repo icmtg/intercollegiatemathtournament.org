@@ -22,13 +22,23 @@
   #timerWrapper.blink {
     color: black !important;
   }
+  #resizeHandle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 18px;
+    height: 18px;
+    cursor: se-resize;
+    background: linear-gradient(135deg, transparent 50%, #94a3b8 50%);
+    border-radius: 0 0 4px 0;
+  }
   </style>
 </head>
 
 <body class="m-0 p-0 w-full h-full">
   <iframe id="clarificationsFrame" class="m-0 p-0 w-full h-full block" src="" frameborder="0">No document found</iframe>
 
-  <div id="timerWrapper" class="m-0 fixed top-0 left-0 z-[1000] bg-gradient-to-r from-blue-50 to-blue-100 border-2 border-blue-400 rounded-md p-3 flex items-center gap-3">
+  <div id="timerWrapper" class="m-0 fixed top-0 left-0 z-[1000] bg-gradient-to-r from-blue-50 to-blue-100 border-2 border-blue-400 rounded-md p-3 flex items-center gap-3" style="position:fixed;">
     <div id="timerText" class="font-mono text-[3em] cursor-default w-[8ch] text-center" style="display:none"></div>
     <input id="timerInput" class="font-mono text-[3em] bg-transparent border-none outline-none cursor-default w-[8ch] text-center" value="1.2 min" placeholder="# mins" autofocus />
     <button id="timerPlay" class="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 border-none cursor-pointer flex items-center justify-center transition-colors" data-play-class="bg-green-500 hover:bg-green-600" data-pause-class="bg-gray-500 hover:bg-gray-600">
@@ -38,6 +48,7 @@
     <button id="timerReset" class="w-14 h-14 rounded-full bg-gray-400 border-none cursor-not-allowed flex items-center justify-center transition-colors" disabled>
       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="white"><rect x="4" y="4" width="16" height="16" rx="2" /></svg>
     </button>
+    <div id="resizeHandle"></div>
   </div>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

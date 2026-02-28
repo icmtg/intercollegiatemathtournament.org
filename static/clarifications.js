@@ -12,10 +12,62 @@ window.sleep = async function sleep(ms) {
 /* global initTimer */
 window.initTimer = function initTimer() {
   $("#timerWrapper").draggable({
-    cancel: "input,textarea,button,select,option,svg,polygon,rect",
+    cancel: "input,textarea,button,select,option,svg,polygon,rect,#resizeHandle",
     containment: "window",
     iframeFix: true,
     scroll: false,
+  });
+
+  const wrapper = document.getElementById("timerWrapper");
+  const handle = document.getElementById("resizeHandle");
+  const baseFontSize = 3;
+  const baseWidth = wrapper.offsetWidth;
+  const baseBtnSize = 56;
+  const baseIconSize = 24;
+  let resizing = false;
+
+  function applyScale(scale) {
+    scale = Math.max(0.5, scale);
+    wrapper.querySelectorAll("#timerText, #timerInput").forEach(el => {
+      el.style.fontSize = (baseFontSize * scale) + "em";
+    });
+    wrapper.querySelectorAll("button").forEach(el => {
+      el.style.width = Math.round(baseBtnSize * scale) + "px";
+      el.style.height = Math.round(baseBtnSize * scale) + "px";
+    });
+    wrapper.querySelectorAll("button svg").forEach(el => {
+      el.style.width = Math.round(baseIconSize * scale) + "px";
+      el.style.height = Math.round(baseIconSize * scale) + "px";
+    });
+  }
+
+  handle.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    resizing = true;
+    const startX = e.clientX;
+    const startWidth = wrapper.offsetWidth;
+    const cover = document.createElement("div");
+    Object.assign(cover.style, {
+      position: "fixed", inset: "0", width: "100%", height: "100%",
+      zIndex: "999", cursor: "se-resize", margin: "0", padding: "0",
+    });
+    document.body.appendChild(cover);
+
+    function onMove(e) {
+      if (!resizing) return;
+      const newWidth = startWidth + (e.clientX - startX);
+      const scale = newWidth / baseWidth;
+      applyScale(scale);
+    }
+    function onUp() {
+      resizing = false;
+      cover.remove();
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseup", onUp);
+    }
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseup", onUp);
   });
 
   const query = getQueryParams();
