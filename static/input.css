@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @config "../tailwind.config.js";
+@source "../templates/**/*.html";
+@source "../static/**/*.js";
 
 @theme {
   --font-sans: Inter, sans-serif;
