@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="m-0 p-0 w-full h-full">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="language" content="english">
+  <title>Timer + Clarifications</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" type="image/png" href="{{ get_url(path="/favicon/favicon-96x96.png") }}">
+  <link rel="stylesheet" href="/style.css?{{ get_random(end=1000000) }}" />
+  {% block extra_head %}{% endblock %}
+
+  <style>
+  .frameCover {
+    @apply m-0 p-0 w-full h-full block fixed inset-0 z-[1];
+  }
+  #timerWrapper.expired {
+    color: red;
+  }
+  #timerWrapper.blink {
+    color: black !important;
+  }
+  </style>
+</head>
+
+<body class="m-0 p-0 w-full h-full">
+  <iframe id="clarificationsFrame" class="m-0 p-0 w-full h-full block" src="" frameborder="0">No document found</iframe>
+
+  <div id="timerWrapper" class="m-0 fixed top-0 left-0 z-[1000] bg-gradient-to-r from-blue-50 to-blue-100 border-2 border-blue-400 rounded-md p-3 flex items-center gap-3">
+    <div id="timerText" class="font-mono text-[3em] cursor-default w-[8ch] text-center" style="display:none"></div>
+    <input id="timerInput" class="font-mono text-[3em] bg-transparent border-none outline-none cursor-default w-[8ch] text-center" value="1.2 min" placeholder="# mins" autofocus />
+    <button id="timerPlay" class="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 border-none cursor-pointer flex items-center justify-center transition-colors" data-play-class="bg-green-500 hover:bg-green-600" data-pause-class="bg-gray-500 hover:bg-gray-600">
+      <svg id="playIcon" class="w-6 h-6 ml-1" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21" /></svg>
+      <svg id="pauseIcon" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="white"><rect x="5" y="3" width="4" height="18" /><rect x="15" y="3" width="4" height="18" /></svg>
+    </button>
+    <button id="timerReset" class="w-14 h-14 rounded-full bg-gray-400 border-none cursor-not-allowed flex items-center justify-center transition-colors" disabled>
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="white"><rect x="4" y="4" width="16" height="16" rx="2" /></svg>
+    </button>
+  </div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js" integrity="sha512-MSOo1aY+3pXCOCdGAYoBZ6YGI0aragoQsg1mKKBHXCYPIWxamwOE7Drh+N5CPgGI5SA9IEKJiPjdfqWFWmZtRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="{{ get_url(path="/clarifications.js", cachebust=true) | safe }}"></script>
+
+  {% block extra_body %}{% endblock %}
+</body>
+
+</html>
