@@ -8,8 +8,5 @@ compile_sass = false
 build_search_index = false
 
 
-[markdown]
-math = true
-
 [extra]
 # Put all your custom variables here
