@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex flex-col max-w-4xl mx-auto py-16 px-8 gap-8">
+  <header class="self-center flex flex-col items-center">
+    <div class="flex items-center gap-8">
+      <img src="{{ get_url(path="assets/logo.svg") }}" alt="ICMT Logo" class="h-16" />
+      <div class="flex flex-col">
+        <span class="font-bold text-xl">Intercollegiate Math Tournament</span>
+        <div class="flex gap-4 text-gray-600">
+          <span>Columbia University</span>
+          <span>February 28, 2026</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <a href="/" class="self-center text-link">Back to Home</a>
+
+  <div class="flex flex-col gap-8">
+
+    {% if page.extra.problems %}
+    <div>
+      <h2 class="font-semibold text-xl mb-4">Problems</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {% for item in page.extra.problems %}
+        <a href="{{ item.url }}" class="flex items-center gap-3 bg-white border border-gray-200 rounded-lg px-4 py-3 shadow-sm hover:shadow-md hover:border-blue-200 transition-all group">
+          <div class="bg-red-50 text-red-600 font-semibold text-xs px-2 py-0.5 rounded shrink-0">PDF</div>
+          <span class="text-sm text-gray-700 group-hover:text-blue-600 transition-colors">{{ item.name }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if page.extra.solutions %}
+    <div>
+      <h2 class="font-semibold text-xl mb-4">Solutions</h2>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {% for item in page.extra.solutions %}
+        <a href="{{ item.url }}" class="flex items-center gap-3 bg-white border border-gray-200 rounded-lg px-4 py-3 shadow-sm hover:shadow-md hover:border-green-200 transition-all group">
+          <div class="bg-green-50 text-green-600 font-semibold text-xs px-2 py-0.5 rounded shrink-0">PDF</div>
+          <span class="text-sm text-gray-700 group-hover:text-green-600 transition-colors">{{ item.name }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if page.extra.results %}
+    <div>
+      <h2 class="font-semibold text-xl mb-4">Results</h2>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {% for item in page.extra.results %}
+        <a href="{{ item.url }}" class="flex items-center gap-3 bg-white border border-gray-200 rounded-lg px-4 py-3 shadow-sm hover:shadow-md hover:border-blue-200 transition-all group">
+          <div class="bg-blue-50 text-blue-600 font-semibold text-xs px-2 py-0.5 rounded shrink-0">PDF</div>
+          <span class="text-sm text-gray-700 group-hover:text-blue-600 transition-colors">{{ item.name }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if page.content %}
+    <div class="prose max-w-none">
+      {{ page.content | safe }}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
