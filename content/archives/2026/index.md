@@ -27,6 +27,30 @@ url = "individual-a.pdf"
 name = "Individual Round (Division B)"
 url = "individual-b.pdf"
 
+[[extra.solutions]]
+name = "Power Round (Division A)"
+url = "power-a-solutions.pdf"
+
+[[extra.solutions]]
+name = "Power Round (Division B)"
+url = "power-b-solutions.pdf"
+
+[[extra.solutions]]
+name = "Constellation Round (Division A)"
+url = "constellation-a-solutions.pdf"
+
+[[extra.solutions]]
+name = "Constellation Round (Division B)"
+url = "constellation-b-solutions.pdf"
+
+[[extra.solutions]]
+name = "Individual Round (Division A)"
+url = "individual-a-solutions.pdf"
+
+[[extra.solutions]]
+name = "Individual Round (Division B)"
+url = "individual-b-solutions.pdf"
+
 [[extra.results]]
 name = "Results (Division A)"
 url = "results-a.pdf"
@@ -37,7 +61,5 @@ url = "results-b.pdf"
 +++
 
 The inaugural Intercollegiate Math Tournament was held on February 28, 2026 at Columbia University.
-
-Solutions will be released soon.
 
 Want to try the Constellation Round? We'll be releasing a website where you can simulate competing live against real data from the teams who took the contest. Stay tuned!
