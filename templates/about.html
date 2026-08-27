@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="max-w-4xl mx-auto text-center flex flex-col gap-4 px-8 py-16">
+  <h1 class="font-bold text-4xl mb-4">About ICMT</h1>
+
+  <h2 class="font-semibold text-2xl">Who's this for?</h2>
+
+  <p>
+    Eligibility for registration:
+    <em>
+      Each participant must be an actively enrolled undergraduate student at a
+      college or university, who has not yet received a bachelor's degree.
+    </em>
+  </p>
+
+  <div class="grid sm:grid-cols-2 gap-4">
+    <div class="flex flex-col gap-4">
+      <div class="border border-2 p-4 rounded-xl relative">
+        <h3 class="font-semibold text-lg">Division A</h3>
+        <p class="italic">For the seasoned contestant</p>
+      </div>
+
+      <p>
+        In addition to the Division B syllabus, topics include linear algebra,
+        abstract algebra, real and complex analysis, as well as other
+        undergraduate subjects.
+      </p>
+
+      <p>
+        <a href="/assets/sample-problems-a.pdf" class="text-link">
+          View Division A sample problems here!
+        </a>
+        <br>
+        <span class="text-gray-500 italic">
+          (updated July 10, 2025)
+        </span>
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <div class="border border-2 p-4 rounded-xl relative">
+        <h3 class="font-semibold text-lg">Division B</h3>
+        <p class="italic">For the novice contestant</p>
+      </div>
+
+      <p>
+        Topics include
+        <a
+          class="text-link"
+          href="https://artofproblemsolving.com/wiki/index.php/AMC_12"
+        >
+          high school math competition subjects
+        </a>,
+        as well as single- and multi-variable calculus, differential equations,
+        and basic linear algebra.
+      </p>
+
+      <p>
+        <a href="/assets/sample-problems-b.pdf" class="text-link">
+          View Division B sample problems here!
+        </a>
+        <br>
+        <span class="text-gray-500 italic">
+          (updated July 10, 2025)
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="max-w-6xl mx-auto text-center flex flex-col gap-4 px-8 py-16">
+  <h2 class="font-semibold text-2xl">Contest Format</h2>
+
+  <p>
+    ICMT consists of two team-based rounds and one individual round.
+  </p>
+
+  <p>
+    Teams may have up to 4 students. Teammates do not need to be from the same
+    university.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-4">
+    <div class="bg-white shadow rounded-xl p-4 flex flex-col items-center gap-2">
+      <img
+        class="h-24 w-24 p-2"
+        src="{{ get_url(path="assets/round-power.png") }}"
+      />
+
+      <h3 class="font-semibold text-lg">Power Round</h3>
+
+      <p>
+        A proof-based team round. Contestants answer a series of questions
+        centered around a topic, culminating in incredible results in the field
+        of that chosen topic.
+      </p>
+    </div>
+
+    <div class="bg-white shadow rounded-xl p-4 flex flex-col items-center gap-2">
+      <img
+        class="h-24 w-24"
+        src="{{ get_url(path="assets/round-individual.png") }}"
+      />
+
+      <h3 class="font-semibold text-lg">Individual Round</h3>
+
+      <p>
+        Contestants complete a series of short-answer questions ranging over a
+        broad reach of mathematical topics covered within their division.
+      </p>
+    </div>
+
+    <div class="bg-white shadow rounded-xl p-4 flex flex-col items-center gap-2">
+      <img
+        class="h-24 w-24"
+        src="{{ get_url(path="assets/round-constellation.png") }}"
+      />
+
+      <h3 class="font-semibold text-lg">Constellation Round</h3>
+
+      <p>
+        With realtime submission and a live scoreboard, this round tests not
+        only teams' mathematical knowledge, but also strategic planning and
+        quick thinking.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="max-w-4xl mx-auto flex flex-col items-center text-sm text-gray-500 px-8 py-16 text-center">
+  <p>
+    Copyright &copy; 2026 Intercollegiate Math Tournament Group, a California
+    nonprofit public benefit corporation.
+  </p>
+
+  <p>
+    ICMTG is exempt from federal income tax under section 501(c)(3) of the
+    Internal Revenue Code. EIN: 33-3765111
+  </p>
+
+  <p>
+    Questions? Want to sponsor? Reach us at
+    team@intercollegiatemathtournament.org.
+  </p>
+</div>
+
+{% endblock %}
