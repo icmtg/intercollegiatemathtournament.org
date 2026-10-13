@@ -21,14 +21,8 @@
       const el = document.getElementById("registration-opens");
       const opens = new Date(el.dateTime);
       try {
-        const day = opens.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-        const hourCycle = new Intl.DateTimeFormat(undefined, { hour: "numeric" }).resolvedOptions().hourCycle;
-        const h24 = hourCycle === "h23" || hourCycle === "h24";
-        const time = h24
-          ? opens.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZoneName: "short" })
-          : opens.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZoneName: "short" }).replace(":00", "");
-        el.textContent = `${day}, ${time}`;
-        el.title = new Intl.DateTimeFormat("en-US", { timeZoneName: "long" }).formatToParts(opens).find((p) => p.type === "timeZoneName").value;
+        el.textContent = opens.toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+        el.title = new Intl.DateTimeFormat(undefined, { timeZoneName: "long" }).formatToParts(opens).find((p) => p.type === "timeZoneName").value;
       } catch (e) {}
     })();
   </script>
