@@ -21,7 +21,11 @@
       const opens = new Date("2026-10-16T01:00:00Z");
       try {
         const day = opens.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-        const time = opens.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZoneName: "short" }).replace(":00", "");
+        const hourCycle = new Intl.DateTimeFormat(undefined, { hour: "numeric" }).resolvedOptions().hourCycle;
+        const h24 = hourCycle === "h23" || hourCycle === "h24";
+        const time = h24
+          ? opens.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZoneName: "short" })
+          : opens.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZoneName: "short" }).replace(":00", "");
         document.getElementById("registration-opens").textContent = `${day}, ${time}`;
       } catch (e) {}
     })();
