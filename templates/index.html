@@ -14,11 +14,12 @@
   </p>
   <a href="/2027" class="flex items-center gap-2 border border-blue-200 bg-blue-50 hover:bg-blue-100 rounded-full pl-1.5 pr-3 py-1.5 text-sm text-gray-700 transition-colors">
     <span class="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">NEW</span>
-    <span>Registration opens <span id="registration-opens">Oct 15, 9 PM ET</span> →</span>
+    <span>Registration opens <time id="registration-opens" datetime="2026-10-16T01:00:00Z" title="Eastern Daylight Time">Oct 15, 9 PM ET</time> →</span>
   </a>
   <script>
     (() => {
-      const opens = new Date("2026-10-16T01:00:00Z");
+      const el = document.getElementById("registration-opens");
+      const opens = new Date(el.dateTime);
       try {
         const day = opens.toLocaleDateString("en-US", { month: "short", day: "numeric" });
         const hourCycle = new Intl.DateTimeFormat(undefined, { hour: "numeric" }).resolvedOptions().hourCycle;
@@ -26,7 +27,8 @@
         const time = h24
           ? opens.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZoneName: "short" })
           : opens.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZoneName: "short" }).replace(":00", "");
-        document.getElementById("registration-opens").textContent = `${day}, ${time}`;
+        el.textContent = `${day}, ${time}`;
+        el.title = new Intl.DateTimeFormat("en-US", { timeZoneName: "long" }).formatToParts(opens).find((p) => p.type === "timeZoneName").value;
       } catch (e) {}
     })();
   </script>
