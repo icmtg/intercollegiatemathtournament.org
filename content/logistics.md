@@ -1,6 +1,8 @@
 +++
 title = "Logistics"
 date = 2026-02-28
+path = "2026/logistics"
+aliases = ["/logistics/"]
 +++
 
 For a printable summary of event logistics, download the [Tournament Guide PDF](/assets/tournament-guide.pdf).

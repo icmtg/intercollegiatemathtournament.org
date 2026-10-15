@@ -1,6 +1,8 @@
 +++
 title = "Contest Format"
 date = 2026-02-28
+path = "2026/contest-format"
+aliases = ["/contest-format/"]
 +++
 
 ICMT consists of three rounds: the **Power Round**, the **Constellation Round**, and the **Individual Round**. The two divisions have separate rankings; scores in one division do not affect the other.

@@ -1,6 +1,8 @@
 +++
 title = "Friday Activities Night"
 date = 2026-02-28
+path = "2026/friday-night"
+aliases = ["/friday-night/"]
 +++
 
 For a printable guide, download the [Friday Night Activities Guide](/assets/friday-activities-guide.pdf).
