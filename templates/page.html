@@ -17,30 +17,16 @@
 
   <a href="/" class="self-center text-link">Back to Home</a>
 
-  {% set is_tabbed = page.permalink is ending_with("/icmt-2026/") or page.permalink is ending_with("/friday-night/") or page.permalink is ending_with("/logistics/") or page.permalink is ending_with("/contest-format/") %}
-
-  {% if is_tabbed %}
+  {% if page.path is starting_with("/2026/") %}
   <nav class="flex justify-center border-b border-gray-200">
-    {% if page.permalink is ending_with("/icmt-2026/") %}
-      <a href="/icmt-2026/" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600 -mb-px">Registration</a>
-    {% else %}
-      <a href="/icmt-2026/" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 border-b-2 border-transparent -mb-px">Registration</a>
-    {% endif %}
-    {% if page.permalink is ending_with("/friday-night/") %}
-      <a href="/friday-night/" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600 -mb-px">Friday Night</a>
-    {% else %}
-      <a href="/friday-night/" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 border-b-2 border-transparent -mb-px">Friday Night</a>
-    {% endif %}
-    {% if page.permalink is ending_with("/logistics/") %}
-      <a href="/logistics/" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600 -mb-px">Logistics</a>
-    {% else %}
-      <a href="/logistics/" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 border-b-2 border-transparent -mb-px">Logistics</a>
-    {% endif %}
-    {% if page.permalink is ending_with("/contest-format/") %}
-      <a href="/contest-format/" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600 -mb-px">Round Rules & Scoring</a>
-    {% else %}
-      <a href="/contest-format/" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 border-b-2 border-transparent -mb-px">Round Rules & Scoring</a>
-    {% endif %}
+    {% set labels = ["Registration", "Friday Night", "Logistics", "Round Rules & Scoring"] %}
+    {% for path in ["/2026/", "/2026/friday-night/", "/2026/logistics/", "/2026/contest-format/"] %}
+      {% if page.path == path %}
+      <a href="{{ path | safe }}" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600 -mb-px">{{ labels[loop.index0] }}</a>
+      {% else %}
+      <a href="{{ path | safe }}" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 border-b-2 border-transparent -mb-px">{{ labels[loop.index0] }}</a>
+      {% endif %}
+    {% endfor %}
   </nav>
   {% endif %}
 
