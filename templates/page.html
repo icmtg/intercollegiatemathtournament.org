@@ -6,7 +6,7 @@
     <div class="flex items-center gap-8">
       <img src="{{ get_url(path="assets/logo.svg") }}" alt="ICMT Logo" class="h-16" />
       <div class="flex flex-col">
-        <span class="font-bold text-xl">Intercollegiate Math Tournament</span>
+        <span class="font-bold text-xl">Intercollegiate Math Tournament 2026</span>
         <div class="flex gap-4 text-gray-600">
           <span>Columbia University</span>
           <span>February 28, 2026</span>
@@ -15,16 +15,14 @@
     </div>
   </header>
 
-  <a href="/" class="self-center text-link">Back to Home</a>
-
   {% if page.path is starting_with("/2026/") %}
-  <nav class="flex justify-center border-b border-gray-200">
+  <nav class="self-center flex flex-wrap justify-center gap-1 p-1 rounded-3xl bg-gray-100 text-sm font-medium">
     {% set labels = ["Registration", "Friday Night", "Logistics", "Round Rules & Scoring"] %}
     {% for path in ["/2026/", "/2026/friday-night/", "/2026/logistics/", "/2026/contest-format/"] %}
       {% if page.path == path %}
-      <a href="{{ path | safe }}" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600 -mb-px">{{ labels[loop.index0] }}</a>
+      <a href="{{ path | safe }}" class="px-4 py-1.5 rounded-full bg-white shadow-sm text-gray-900">{{ labels[loop.index0] }}</a>
       {% else %}
-      <a href="{{ path | safe }}" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 border-b-2 border-transparent -mb-px">{{ labels[loop.index0] }}</a>
+      <a href="{{ path | safe }}" class="px-4 py-1.5 rounded-full text-gray-500 hover:text-gray-800">{{ labels[loop.index0] }}</a>
       {% endif %}
     {% endfor %}
   </nav>
