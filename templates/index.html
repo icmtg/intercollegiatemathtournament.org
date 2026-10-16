@@ -14,18 +14,8 @@
   </p>
   <a href="/2027" class="flex items-center gap-2 border border-blue-200 bg-blue-50 hover:bg-blue-100 rounded-full pl-1.5 pr-3 py-1.5 text-sm text-gray-700 transition-colors">
     <span class="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">NEW</span>
-    <span>Registration opens <time id="registration-opens" datetime="2026-10-16T01:00:00Z" title="Eastern Daylight Time">Oct 15, 9 PM ET</time> →</span>
+    <span>Registration is open →</span>
   </a>
-  <script>
-    (() => {
-      const el = document.getElementById("registration-opens");
-      const opens = new Date(el.dateTime);
-      try {
-        el.textContent = opens.toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" });
-        el.title = new Intl.DateTimeFormat(undefined, { timeZoneName: "long" }).formatToParts(opens).find((p) => p.type === "timeZoneName").value;
-      } catch (e) {}
-    })();
-  </script>
   <!-- <div class="flex flex-col sm:flex-row gap-4">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScT2f6huN7jxNEzCEJ1T6KtUpPZAECDTLkxxsl3MVRmsUaN5Q/viewform?usp=sharing&ouid=115752105198797570657" class="flex items-center gap-2 border border-blue-200 bg-blue-50 hover:bg-blue-100 rounded-full pl-1.5 pr-3 py-1.5 text-sm text-gray-700 transition-colors">
       <span class="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">NEW</span> Do you want to join ICMT? →
